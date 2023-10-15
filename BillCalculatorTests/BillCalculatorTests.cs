@@ -107,5 +107,69 @@ namespace BillCalculatorTests
 
             // Assert - Expects an exception to be thrown
         }
+
+        [TestMethod]
+        public void CalculateTipPerPerson_ShouldReturnCorrectTipPerPerson_WhenValidInput()
+        {
+            // Arrange
+            BillCalculator billCalculator = new BillCalculator();
+            decimal totalPrice = 100;
+            int numberOfPatrons = 5;
+            float tipPercentage = 15;
+
+            // Act
+            decimal tipPerPerson = billCalculator.CalculateTipPerPerson(totalPrice, numberOfPatrons, tipPercentage);
+
+            // Assert
+            Assert.AreEqual(3, tipPerPerson);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void CalculateTipPerPerson_ShouldThrowException_WhenTotalPriceIsZero()
+        {
+            // Arrange
+            BillCalculator billCalculator = new BillCalculator();
+            decimal totalPrice = 0;
+            int numberOfPatrons = 5;
+            float tipPercentage = 15;
+
+            // Act
+            decimal tipPerPerson = billCalculator.CalculateTipPerPerson(totalPrice, numberOfPatrons, tipPercentage);
+
+            // Assert - Expects an exception to be thrown
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void CalculateTipPerPerson_ShouldThrowException_WhenNumberOfPatronsIsZero()
+        {
+            // Arrange
+            BillCalculator billCalculator = new BillCalculator();
+            decimal totalPrice = 100;
+            int numberOfPatrons = 0;
+            float tipPercentage = 15;
+
+            // Act
+            decimal tipPerPerson = billCalculator.CalculateTipPerPerson(totalPrice, numberOfPatrons, tipPercentage);
+
+            // Assert - Expects an exception to be thrown
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void CalculateTipPerPerson_ShouldThrowException_WhenTipPercentageIsNegative()
+        {
+            // Arrange
+            BillCalculator billCalculator = new BillCalculator();
+            decimal totalPrice = 100;
+            int numberOfPatrons = 5;
+            float tipPercentage = -5;
+
+            // Act
+            decimal tipPerPerson = billCalculator.CalculateTipPerPerson(totalPrice, numberOfPatrons, tipPercentage);
+
+            // Assert - Expects an exception to be thrown
+        }
     }
 }

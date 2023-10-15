@@ -17,7 +17,7 @@ namespace BillCalculatorLibrary
             return splitAmount;
         }
 
-        // Method for calculating tip for each person based on their meal cost and tip percentage
+        // Method for calculating tip amounts based on meal costs and tip percentage
         public Dictionary<string, decimal> CalculateTip(Dictionary<string, decimal> mealCosts, float tipPercentage)
         {
             if (mealCosts == null)
@@ -39,6 +39,29 @@ namespace BillCalculatorLibrary
             }
 
             return tipAmounts;
+        }
+
+        // Method for calculating tip per person based on total price, number of patrons, and tip percentage
+        public decimal CalculateTipPerPerson(decimal totalPrice, int numberOfPatrons, float tipPercentage)
+        {
+            if (totalPrice <= 0)
+            {
+                throw new ArgumentException("Total price must be greater than zero.");
+            }
+
+            if (numberOfPatrons <= 0)
+            {
+                throw new ArgumentException("Number of patrons must be greater than zero.");
+            }
+
+            if (tipPercentage < 0 || tipPercentage > 100)
+            {
+                throw new ArgumentOutOfRangeException(nameof(tipPercentage), "Tip percentage must be between 0 and 100.");
+            }
+
+            decimal totalTip = totalPrice * (decimal)(tipPercentage / 100);
+            decimal tipPerPerson = totalTip / numberOfPatrons;
+            return tipPerPerson;
         }
     }
 }
