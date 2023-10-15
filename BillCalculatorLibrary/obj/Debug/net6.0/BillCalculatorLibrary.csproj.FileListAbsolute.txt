@@ -1,0 +1,12 @@
+D:\web\BillCalculatorLibrary\bin\Debug\net6.0\BillCalculatorLibrary.deps.json
+D:\web\BillCalculatorLibrary\bin\Debug\net6.0\BillCalculatorLibrary.dll
+D:\web\BillCalculatorLibrary\bin\Debug\net6.0\BillCalculatorLibrary.pdb
+D:\web\BillCalculatorLibrary\obj\Debug\net6.0\BillCalculatorLibrary.csproj.AssemblyReference.cache
+D:\web\BillCalculatorLibrary\obj\Debug\net6.0\BillCalculatorLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\web\BillCalculatorLibrary\obj\Debug\net6.0\BillCalculatorLibrary.AssemblyInfoInputs.cache
+D:\web\BillCalculatorLibrary\obj\Debug\net6.0\BillCalculatorLibrary.AssemblyInfo.cs
+D:\web\BillCalculatorLibrary\obj\Debug\net6.0\BillCalculatorLibrary.csproj.CoreCompileInputs.cache
+D:\web\BillCalculatorLibrary\obj\Debug\net6.0\BillCalculatorLibrary.dll
+D:\web\BillCalculatorLibrary\obj\Debug\net6.0\refint\BillCalculatorLibrary.dll
+D:\web\BillCalculatorLibrary\obj\Debug\net6.0\BillCalculatorLibrary.pdb
+D:\web\BillCalculatorLibrary\obj\Debug\net6.0\ref\BillCalculatorLibrary.dll
